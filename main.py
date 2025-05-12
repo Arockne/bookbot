@@ -1,1 +1,14 @@
-print("greetings boots")
+def get_book_text(filepath):
+  file_contents = ''
+  with open(filepath) as f:
+    file_contents = f.read()
+  return file_contents
+
+def number_of_words(text):
+  return len(text.split())
+
+def main():
+  text = get_book_text('./books/frankenstein.txt')
+  print(f"{number_of_words(text)} words found in the document")
+
+main()
